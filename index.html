@@ -1,221 +1,183 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>ZinaldoQuantumLab — Quantum Rush v2</title>
-
-  <!-- ═══ STYLES ═══ -->
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zinaldo Quantum Lab — Éditeur</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
 </head>
 <body>
-<div id="app">
 
-  <!-- ── FOND ÉTOILÉ ── -->
-  <div id="bg-stars"></div>
+<!-- NAV -->
+<nav>
+  <div class="logo">Zinaldo · Quantum Lab</div>
+  <ul>
+    <li><a href="#hero">Accueil</a></li>
+    <li><a href="#book">Le Livre</a></li>
+    <li><a href="#reader">Lire</a></li>
+    <li><a href="#about">L'Auteur</a></li>
+  </ul>
+</nav>
 
-  <!-- ══════════════════════════════════════
-       HUD (barre d'interface en haut)
-  ══════════════════════════════════════ -->
-  <div id="hud">
-    <div class="hud-logo">ZINALDO<span>QUANTUM</span>LAB</div>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <!-- Particles injected by JS -->
+  <div class="hero-content">
+    <div class="publisher-tag">Zinaldo Quantum Lab — Éditions 2025</div>
+    <h1 class="hero-title">
+      L'Écho<br>
+      <em>des Étoiles</em><br>Brisées
+    </h1>
+    <p class="hero-subtitle">Un voyage entre physique quantique et mémoire humaine. Une histoire en 20 pages qui changera votre perception du temps.</p>
+    <div class="hero-cta">
+      <a href="#reader" class="btn-primary">Lire Maintenant</a>
+      <a href="#book" class="btn-ghost">Découvrir le livre</a>
+    </div>
+  </div>
+</section>
 
-    <div class="hud-section">
-      <!-- Cœurs (vies) -->
-      <div id="hp-hearts"></div>
-      <!-- Barre d'énergie -->
-      <div class="hud-pill cyan" title="Énergie">
-        <span class="hud-label">EN</span>
-        <div class="bar-wrap">
-          <div class="bar-fill" id="energy-fill" style="width:100%"></div>
+<div class="divider"><span class="divider-symbol">◈</span></div>
+
+<!-- BOOK SHOWCASE -->
+<section id="book">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div class="book-layout">
+      <!-- 3D Book -->
+      <div class="book-cover-container">
+        <div class="book-3d">
+          <div class="book-spine">
+            <span>L'Écho des Étoiles Brisées</span>
+          </div>
+          <div class="book-face">
+            <div class="book-cover-art">
+              <div class="cover-glow"></div>
+              <div class="cover-atom">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="50" cy="50" rx="45" ry="18" stroke="#c8a84b" stroke-width="1" opacity="0.7"/>
+                  <ellipse cx="50" cy="50" rx="45" ry="18" stroke="#c8a84b" stroke-width="1" opacity="0.5" transform="rotate(60 50 50)"/>
+                  <ellipse cx="50" cy="50" rx="45" ry="18" stroke="#c8a84b" stroke-width="1" opacity="0.5" transform="rotate(120 50 50)"/>
+                  <circle cx="50" cy="50" r="5" fill="#c8a84b" opacity="0.9"/>
+                  <circle cx="95" cy="50" r="3" fill="#e8c96a"/>
+                  <circle cx="72" cy="12" r="2" fill="#e8c96a" opacity="0.8"/>
+                </svg>
+              </div>
+              <div class="cover-title-text">
+                L'Écho des<br>Étoiles
+                <em>Brisées</em>
+              </div>
+              <div class="cover-author">Zinaldo · Quantum Lab</div>
+            </div>
+            <div class="cover-bottom-bar">
+              <span>Fiction Quantique</span>
+              <span>20 Pages</span>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Barre de bouclier (cachée si pas de bouclier) -->
-      <div class="hud-pill cyan" id="shield-pill" style="display:none" title="Bouclier">
-        <span class="hud-label">🛡</span>
-        <div class="bar-wrap">
-          <div class="bar-fill" id="shield-fill" style="width:100%"></div>
+
+      <!-- Book Info -->
+      <div class="book-info">
+        <div class="book-genre">◈ Fiction Scientifique · Philosophique</div>
+        <h2 class="book-title-main">L'Écho des<br><em>Étoiles Brisées</em></h2>
+        <p class="book-author-line">par Zinaldo — Quantum Lab Éditions</p>
+        <div class="book-stats">
+          <div class="stat"><span class="stat-num">20</span><span class="stat-label">Pages</span></div>
+          <div class="stat"><span class="stat-num">7</span><span class="stat-label">Chapitres</span></div>
+          <div class="stat"><span class="stat-num">2025</span><span class="stat-label">Année</span></div>
+          <div class="stat"><span class="stat-num">1ère</span><span class="stat-label">Édition</span></div>
+        </div>
+        <p class="book-synopsis">
+          Dans un laboratoire suspendu entre deux dimensions, la physicienne <strong>Noa Velde</strong> découvre que chaque décision humaine laisse une empreinte lumineuse dans le tissu de l'espace-temps. En cherchant à retrouver la signature quantique de son frère disparu, elle plonge dans un univers où les souvenirs ont une masse, où les regrets brillent comme des pulsars, et où l'amour peut altérer la vitesse de la lumière.
+        </p>
+        <p class="book-synopsis">
+          Une histoire qui oscille entre la rigueur de la physique et la poésie de la perte. Une œuvre fondatrice de <em>Zinaldo Quantum Lab</em>.
+        </p>
+        <a href="#reader" class="btn-primary">Lire l'extrait — Gratuit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span class="divider-symbol">◈</span></div>
+
+<!-- READER -->
+<section id="reader">
+  <div class="reader-header">
+    <div>
+      <div class="section-label">Lecture</div>
+      <h2 class="section-title">L'Écho des<br><em style="color:var(--gold); font-style:italic">Étoiles Brisées</em></h2>
+    </div>
+    <div style="font-family:'Space Mono',monospace; font-size:0.58rem; letter-spacing:0.2em; color:var(--fog); text-transform:uppercase; text-align:right;">
+      Zinaldo Quantum Lab<br>
+      <span style="color:var(--gold)">Édition 2025</span>
+    </div>
+  </div>
+
+  <div class="reader-container">
+    <!-- Page nav -->
+    <div class="page-nav" id="pageNav"></div>
+
+    <!-- Pages injected by JS -->
+    <div id="pagesContainer"></div>
+
+    <!-- Navigation arrows -->
+    <div class="page-footer-arrows">
+      <button class="arrow-btn" id="prevBtn" onclick="changePage(-1)">← Page précédente</button>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <button class="arrow-btn" id="nextBtn" onclick="changePage(1)">Page suivante →</button>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span class="divider-symbol">◈</span></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="about-frame">
+        <div class="author-portrait">
+          <span class="author-initials">ZQL</span>
         </div>
       </div>
-    </div>
-
-    <div class="hud-section">
-      <div class="hud-pill gold">⬡ <span id="score-hud">0</span></div>
-      <div class="hud-pill cyan">LV<span id="level-hud">1</span></div>
-      <!-- Compteur combo (caché si combo ≤ 1) -->
-      <div class="hud-pill magenta" id="combo-hud" style="display:none">
-        ×<span id="combo-num">1</span>
+      <div class="about-badge">
+        <strong>Ⅰ</strong>
+        <span>Premier<br>Livre</span>
       </div>
     </div>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       ÉCRAN PRINCIPAL (Menu)
-  ══════════════════════════════════════ -->
-  <div class="screen" id="scr-start">
-    <div class="screen-title">QUANTUM RUSH</div>
-    <p class="screen-sub">by ZinaldoQuantumLab — v2.0</p>
-
-    <!-- Cartes personnages -->
-    <div class="char-row">
-      <div class="char-card hero">
-        <span class="char-emoji">🧬</span>
-        <div class="char-name">ZINALDO</div>
-        <div class="char-desc">Héros quantique<br>Double saut · Laser</div>
+    <div class="about-text">
+      <div class="section-label">L'Auteur</div>
+      <h2 class="section-title">Zinaldo<br><em style="font-style:italic; color:var(--gold)">Quantum Lab</em></h2>
+      <p class="about-bio">
+        Zinaldo Quantum Lab est une maison d'édition et un collectif créatif fondé à l'intersection de la science et de la littérature. Née de la conviction que la physique quantique recèle les plus belles métaphores de l'expérience humaine, l'entité publie des œuvres qui défient les frontières entre le réel et l'imaginaire.
+      </p>
+      <div class="about-quote">
+        « La mémoire est une particule. Elle existe à la fois ici et ailleurs, dans tous les états, jusqu'au moment où quelqu'un l'observe. »
       </div>
-      <div class="char-card villain">
-        <span class="char-emoji">🤖</span>
-        <div class="char-name">ZIBO</div>
-        <div class="char-desc">Robot corrompu<br>Tire des missiles</div>
-      </div>
-      <div class="char-card villain">
-        <span class="char-emoji">🔮</span>
-        <div class="char-name">QUANTARA</div>
-        <div class="char-desc">Sorcière ennemie<br>Se téléporte</div>
-      </div>
-      <div class="char-card villain">
-        <span class="char-emoji">🕷️</span>
-        <div class="char-name">NEBULON</div>
-        <div class="char-desc">Araignée cosmique<br>Toiles quantiques</div>
-      </div>
-      <div class="char-card boss-card">
-        <span class="char-emoji">💀</span>
-        <div class="char-name">VORTEX</div>
-        <div class="char-desc">Seigneur des Ombres<br>Boss Final — Niv.10</div>
-      </div>
-    </div>
-
-    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
-      <button class="btn btn-primary"   onclick="openLevelSelect()">▶ JOUER</button>
-      <button class="btn btn-secondary" onclick="startFromLevel(1)">▶ NOUVEAU JEU</button>
-    </div>
-    <p style="color:#ffffff22;font-size:10px;margin-top:20px;letter-spacing:2px;">
-      ← → DÉPLACER · ESPACE SAUTER · Z ATTAQUE · X DASH
-    </p>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       ÉCRAN SÉLECTION DE NIVEAU
-  ══════════════════════════════════════ -->
-  <div class="screen" id="scr-lvlsel" style="display:none;">
-    <div class="screen-title" style="font-size:clamp(18px,4vw,40px);">SÉLECTION NIVEAU</div>
-    <p class="screen-sub">Choisissez votre secteur</p>
-    <!-- Grille remplie dynamiquement par buildLevelGrid() dans game.js -->
-    <div class="level-grid" id="level-grid"></div>
-    <button class="btn btn-primary" onclick="showScreen('scr-start')">← RETOUR</button>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       ÉCRAN GAME OVER
-  ══════════════════════════════════════ -->
-  <div class="screen" id="scr-gameover" style="display:none;">
-    <div class="screen-title">GAME OVER</div>
-    <p class="screen-sub">La matière quantique s'est dissipée</p>
-    <div style="font-family:'Orbitron',sans-serif;font-size:22px;color:var(--c3);margin-bottom:30px;">
-      ⬡ <span id="go-score">0</span>&nbsp;&nbsp;|&nbsp;&nbsp;LV <span id="go-level">1</span>
-    </div>
-    <button class="btn btn-primary"   onclick="restartCurrentLevel()">↺ RÉESSAYER</button>
-    <button class="btn btn-secondary" onclick="showScreen('scr-start')">⌂ MENU</button>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       ÉCRAN VICTOIRE FINALE
-  ══════════════════════════════════════ -->
-  <div class="screen" id="scr-win" style="display:none;">
-    <div class="screen-title">VICTOIRE!</div>
-    <p class="screen-sub">Zinaldo a vaincu VORTEX!</p>
-    <div style="font-family:'Orbitron',sans-serif;font-size:22px;color:var(--c3);margin-bottom:8px;">
-      Score Final: <span id="win-score">0</span>
-    </div>
-    <div style="color:#ffffff44;font-size:13px;margin-bottom:30px;letter-spacing:2px;" id="win-stars"></div>
-    <button class="btn btn-gold" onclick="showScreen('scr-start')">🏆 MENU PRINCIPAL</button>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       ÉCRAN NIVEAU TERMINÉ
-  ══════════════════════════════════════ -->
-  <div class="screen" id="scr-lvlcomplete" style="display:none;">
-    <div class="screen-title" style="font-size:clamp(16px,4vw,38px);">NIVEAU TERMINÉ!</div>
-    <div style="font-size:36px;margin:10px 0;" id="lc-stars-display">⭐⭐⭐</div>
-    <!-- Tableau de résultats -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;margin-bottom:24px;
-         font-family:'Orbitron',sans-serif;font-size:12px;color:#ffffff66;text-align:left;">
-      <span>Score:</span>   <span style="color:var(--c3)" id="lc-score">0</span>
-      <span>Pièces:</span>  <span style="color:var(--c3)" id="lc-coins">0/0</span>
-      <span>Temps:</span>   <span style="color:var(--c3)" id="lc-time">0s</span>
-      <span>Ennemis:</span> <span style="color:var(--c3)" id="lc-enemies">0/0</span>
-    </div>
-    <button class="btn btn-primary"   id="btn-next-level" onclick="goNextLevel()">NIVEAU SUIVANT ▶</button>
-    <button class="btn btn-secondary" onclick="showScreen('scr-start')">⌂ MENU</button>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       POPUPS FLOTTANTS
-  ══════════════════════════════════════ -->
-  <!-- Popup : annonce du niveau -->
-  <div class="popup popup-cyan" id="pop-level">
-    <h2 id="pop-level-text">NIVEAU 1</h2>
-    <p  id="pop-level-sub">SECTOR ALPHA</p>
-  </div>
-  <!-- Popup : combo -->
-  <div class="popup popup-gold" id="pop-combo">
-    <h2 id="pop-combo-text">COMBO ×3!</h2>
-  </div>
-  <!-- Popup : alerte boss -->
-  <div class="popup popup-magenta" id="pop-boss">
-    <h2>⚠ BOSS ALERT</h2>
-    <p id="pop-boss-name">VORTEX APPROCHE!</p>
-  </div>
-
-  <!-- Notification power-up (glisse depuis la droite) -->
-  <div id="powerup-notif">
-    <span id="pu-icon">⚡</span>
-    <span id="pu-text">Power-up!</span>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       CANVAS DU JEU
-  ══════════════════════════════════════ -->
-  <div id="game-wrap">
-    <canvas id="gc"></canvas>
-  </div>
-
-  <!-- ══════════════════════════════════════
-       CONTRÔLES MOBILES (tactiles)
-  ══════════════════════════════════════ -->
-  <div id="mobile-ctrls">
-    <!-- Gauche -->
-    <div class="ctrl-group">
-      <div class="ctrl-btn cyan"
-           ontouchstart="mb.left=true"  ontouchend="mb.left=false"
-           onmousedown="mb.left=true"   onmouseup="mb.left=false">◀</div>
-      <div class="ctrl-btn cyan"
-           ontouchstart="mb.right=true" ontouchend="mb.right=false"
-           onmousedown="mb.right=true"  onmouseup="mb.right=false">▶</div>
-    </div>
-    <!-- Droite : Dash, Attaque, Saut -->
-    <div class="ctrl-group">
-      <div class="ctrl-btn purple"
-           ontouchstart="mb.dash=true"  ontouchend="mb.dash=false"
-           onmousedown="mb.dash=true"   onmouseup="mb.dash=false">💨</div>
-      <div class="ctrl-btn magenta"
-           ontouchstart="mb.atk=true"   ontouchend="mb.atk=false"
-           onmousedown="mb.atk=true"    onmouseup="mb.atk=false">⚡</div>
-      <div class="ctrl-btn gold"
-           ontouchstart="mb.jump=true"  ontouchend="mb.jump=false"
-           onmousedown="mb.jump=true"   onmouseup="mb.jump=false">▲</div>
+      <p class="about-bio">
+        Chaque publication de Zinaldo Quantum Lab est une invitation à regarder l'univers autrement — à sentir la gravité des émotions et la luminosité des souvenirs comme des phénomènes physiques réels.
+      </p>
+      <a href="#reader" class="btn-primary" style="margin-top:1rem; display:inline-block">Lire le livre</a>
     </div>
   </div>
+</section>
 
-  <!-- Hint clavier (affiché en jeu) -->
-  <div id="controls-hint">
-    ← → DÉPLACER &nbsp;|&nbsp; <kbd>ESPACE</kbd> SAUTER &nbsp;|&nbsp;
-    <kbd>x</kbd> LASER &nbsp;|&nbsp; <kbd>X</kbd> DASH
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">Zinaldo <span>Quantum</span> Lab</div>
+    <div class="footer-tagline">Où la science rencontre la poésie</div>
   </div>
+  <div class="footer-info">
+    © 2025 Zinaldo Quantum Lab<br>
+    Tous droits réservés<br>
+    L'Écho des Étoiles Brisées — 1ère Édition
+  </div>
+</footer>
 
-</div><!-- #app -->
-
-<!-- ═══ LOGIQUE DU JEU ═══ -->
-<script src="game.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
